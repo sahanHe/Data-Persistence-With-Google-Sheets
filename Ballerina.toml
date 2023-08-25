@@ -1,0 +1,18 @@
+[package]
+org = "medical_centre"
+name = "patient_management"
+version = "0.1.0"
+distribution = "2201.7.0"
+
+[build-options]
+observabilityIncluded = true
+
+[persist]
+datastore = "googlesheets"
+module = "patient_management.store"
+
+[[platform.java11.dependency]]
+groupId = "io.ballerina.stdlib"
+artifactId = "persist.googlesheets-native"
+version = "1.1.0"
+
