@@ -3,17 +3,17 @@ POST http://localhost:9090/patient-management/physicians
 content-type: application/json
 
 [{
-    "id": "physician00001",
+    "id": "ph01",
     "name": "John Smith",
     "specialization": "Peadiatrics"
 },
 {
-    "id": "physician00002",
+    "id": "ph02",
     "name": "Jane Carter",
     "specialization": "Internal Medicine"
 },
 {
-    "id": "physician00003",
+    "id": "ph03",
     "name": "Kyle Schmidt",
     "specialization": "Family Medicine"
 }]
@@ -24,12 +24,12 @@ POST http://localhost:9090/patient-management/manufacturers
 content-type: application/json
 
 [{
-    "id": "manufacturer00001",
+    "id": "m01",
     "name": "Pfizer",
     "countryOfOrigin": "USA"
 },
 {
-    "id": "manufacturer00002",
+    "id": "m02",
     "name": "AstraZeneca",
     "countryOfOrigin": "UK"
 }]
@@ -41,21 +41,21 @@ POST http://localhost:9090/patient-management/drugs
 content-type: application/json
 
 [{
-    "id": "drug00001",
+    "id": "d01",
     "name": "Norvasc",
     "description": "treat for hypertension",
-    "manufacturerId": "manufacturer00001"
+    "manufacturerId": "m01"
 },
 {
-    "id": "drug00002",
+    "id": "d02",
     "name": "INDERAL",
-    "manufacturerId": "manufacturer00002",
+    "manufacturerId": "m02",
     "description": "treat for hypertension"
 },
 {
-    "id": "drug00003",
+    "id": "d03",
     "name": "NEXIUM",
-    "manufacturerId": "manufacturer00002",
+    "manufacturerId": "m02",
     "description": "treat for indigestion"
 }]
 
@@ -64,17 +64,17 @@ POST http://localhost:9090/patient-management/patients
 content-type: application/json
 
 [{
-    "id": "patient00001", 
+    "id": "pa01", 
     "name": "Jane Doe", 
     "age": 37
 },
 {
-    "id": "patient00002", 
+    "id": "pa02", 
     "name": "John Doe", 
     "age": 30
 },
 {
-    "id": "patient00003", 
+    "id": "pa03", 
     "name": "Jacob Doe", 
     "age": 7
 }]
@@ -84,24 +84,24 @@ POST http://localhost:9090/patient-management/drug_assignments
 content-type: application/json
 
 [{
-    "drugId": "drug0001", 
-    "patientId": "patient00001", 
-    "physicianId": "physician00001", 
-    "id": "000001", 
+    "drugId": "d01", 
+    "patientId": "pa01", 
+    "physicianId": "ph01", 
+    "id": "01", 
     "quantity": 100
 },
 {
-    "drugId": "drug0002", 
-    "patientId": "patient00002", 
-    "physicianId": "physician00002", 
-    "id": "000002", 
+    "drugId": "d02", 
+    "patientId": "pa02", 
+    "physicianId": "ph02", 
+    "id": "02", 
     "quantity": 100
 },
 {
-    "drugId": "drug0003", 
-    "patientId": "patient00003", 
+    "drugId": "d03", 
+    "patientId": "pa03", 
     "physicianId": "physician00003", 
-    "id": "000003", 
+    "id": "03", 
     "quantity": 100
 }]
 
@@ -111,19 +111,19 @@ POST http://localhost:9090/patient-management/patient_assignments
 content-type: application/json
 
 [{
-    "patientId": "patient00001", 
-    "physicianId": "physician00001", 
-    "id": "assignment000001"
+    "patientId": "pa01", 
+    "physicianId": "ph01", 
+    "id": "a01"
 },
 {
-    "patientId": "patient00002", 
-    "physicianId": "physician00002", 
-    "id": "assignment000002"
+    "patientId": "pa02", 
+    "physicianId": "ph02", 
+    "id": "a02"
 },
 {
-    "patientId": "patient00003", 
-    "physicianId": "physician00003", 
-    "id": "assignment000003"
+    "patientId": "pa03", 
+    "physicianId": "ph03", 
+    "id": "a03"
 }]
 
 
@@ -132,87 +132,87 @@ POST http://localhost:9090/patient-management/blood_pressure
 content-type: application/json
 
 [{
-    "patientId": "patient00001", 
+    "patientId": "pa01", 
     "systolic": 150, 
     "diastolic": 98, 
-    "id": "patient00001", 
+    "id": "pa01", 
     "timestamp": "2023:07:02:17:30:00"
 },
 {
-    "patientId": "patient00001", 
+    "patientId": "pa01", 
     "systolic": 155, 
     "diastolic": 95, 
-    "id": "patient00001", 
+    "id": "pa01", 
     "timestamp": "2023:07:02:19:30:00"
 },
 {
-    "patientId": "patient00001", 
+    "patientId": "pa01", 
     "systolic": 155, 
     "diastolic": 95, 
-    "id": "patient00001", 
+    "id": "pa01", 
     "timestamp": "2023:07:02:21:30:00"
 },
 {
-    "patientId": "patient00001", 
+    "patientId": "pa01", 
     "systolic": 155, 
     "diastolic": 95, 
-    "id": "patient00001", 
+    "id": "pa01", 
     "timestamp": "2023:07:02:23:30:00"
 },
 {
-    "patientId": "patient00002", 
+    "patientId": "pa02", 
     "systolic": 145, 
     "diastolic": 90, 
-    "id": "patient00002", 
+    "id": "pa02", 
     "timestamp": "2023:07:02:17:30:00"
 },
 {
-    "patientId": "patient00002", 
+    "patientId": "pa02", 
     "systolic": 146, 
     "diastolic": 85, 
-    "id": "patient00002", 
+    "id": "pa02", 
     "timestamp": "2023:07:02:19:30:00"
 },
 {
-    "patientId": "patient00002", 
+    "patientId": "pa02", 
     "systolic": 143, 
     "diastolic": 85, 
-    "id": "patient00002", 
+    "id": "pa02", 
     "timestamp": "2023:07:02:21:30:00"
 },
 {
-    "patientId": "patient00002", 
+    "patientId": "pa02", 
     "systolic": 1140, 
     "diastolic": 85, 
-    "id": "patient00002", 
+    "id": "pa02", 
     "timestamp": "2023:07:02:23:30:00"
 },
 {
-    "patientId": "patient00003", 
+    "patientId": "pa03", 
     "systolic": 110, 
     "diastolic": 70, 
-    "id": "patient00003", 
+    "id": "pa03", 
     "timestamp": "2023:07:02:17:30:00"
 },
 {
-    "patientId": "patient00003", 
+    "patientId": "pa03", 
     "systolic": 112, 
     "diastolic": 75, 
-    "id": "patient00003", 
+    "id": "pa03", 
     "timestamp": "2023:07:02:19:30:00"
 },
 {
-    "patientId": "patient00003", 
+    "patientId": "pa03", 
     "systolic": 114, 
     "diastolic": 75, 
-    "id": "patient00003", 
+    "id": "pa03", 
     "timestamp": "2023:07:02:21:30:00"
 },
 {
-    "patientId": "patient00003", 
+    "patientId": "pa03", 
     "systolic": 116, 
     "diastolic": 75, 
-    "id": "patient00003", 
+    "id": "pa03", 
     "timestamp": "2023:07:02:23:30:00"
 }]
 
@@ -220,14 +220,13 @@ content-type: application/json
 GET http://localhost:9090/patient-management/physicians
 
 # Get PatientLogs 
-GET http://localhost:9090/patient-management/patients/patient00003
+GET http://localhost:9090/patient-management/patients/pa03
 
 # Update Blood Pressure
-PUT http://localhost:9090/patient-management/bloodpressure/patient00003/2023%3A07%3A02%3A21%3A30%3A00
+PUT http://localhost:9090/patient-management/bloodpressure/pa03/2023%3A07%3A02%3A21%3A30%3A00
 content-type: application/json
 
 {
     "systolic": 118,
     "diastolic": 75
 }
- 
