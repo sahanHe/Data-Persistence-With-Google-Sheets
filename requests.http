@@ -1,223 +1,223 @@
-# Post Physicians
-POST http://localhost:9090/patient-management/physicians
-content-type: application/json
+# # Post Physicians
+# POST http://localhost:9090/patient-management/physicians
+# content-type: application/json
 
-[{
-    "id": "ph01",
-    "name": "John Smith",
-    "specialization": "Peadiatrics"
-},
-{
-    "id": "ph02",
-    "name": "Jane Carter",
-    "specialization": "Internal Medicine"
-},
-{
-    "id": "ph03",
-    "name": "Kyle Schmidt",
-    "specialization": "Family Medicine"
-}]
-
-
-# Post Manufacturers
-POST http://localhost:9090/patient-management/manufacturers
-content-type: application/json
-
-[{
-    "id": "m01",
-    "name": "Pfizer",
-    "countryOfOrigin": "USA"
-},
-{
-    "id": "m02",
-    "name": "AstraZeneca",
-    "countryOfOrigin": "UK"
-}]
+# [{
+#     "id": "ph01",
+#     "name": "John Smith",
+#     "specialization": "Peadiatrics"
+# },
+# {
+#     "id": "ph02",
+#     "name": "Jane Carter",
+#     "specialization": "Internal Medicine"
+# },
+# {
+#     "id": "ph03",
+#     "name": "Kyle Schmidt",
+#     "specialization": "Family Medicine"
+# }]
 
 
+# # Post Manufacturers
+# POST http://localhost:9090/patient-management/manufacturers
+# content-type: application/json
 
-# Post Drugs
-POST http://localhost:9090/patient-management/drugs
-content-type: application/json
-
-[{
-    "id": "d01",
-    "name": "Norvasc",
-    "description": "treat for hypertension",
-    "manufacturerId": "m01"
-},
-{
-    "id": "d02",
-    "name": "INDERAL",
-    "manufacturerId": "m02",
-    "description": "treat for hypertension"
-},
-{
-    "id": "d03",
-    "name": "NEXIUM",
-    "manufacturerId": "m02",
-    "description": "treat for indigestion"
-}]
-
-# Post Patients
-POST http://localhost:9090/patient-management/patients
-content-type: application/json
-
-[{
-    "id": "pa01", 
-    "name": "Jane Doe", 
-    "age": 37
-},
-{
-    "id": "pa02", 
-    "name": "John Doe", 
-    "age": 30
-},
-{
-    "id": "pa03", 
-    "name": "Jacob Doe", 
-    "age": 7
-}]
-
-# Drug Assignments
-POST http://localhost:9090/patient-management/drug_assignments
-content-type: application/json
-
-[{
-    "drugId": "d01", 
-    "patientId": "pa01", 
-    "physicianId": "ph01", 
-    "id": "01", 
-    "quantity": 100
-},
-{
-    "drugId": "d02", 
-    "patientId": "pa02", 
-    "physicianId": "ph02", 
-    "id": "02", 
-    "quantity": 100
-},
-{
-    "drugId": "d03", 
-    "patientId": "pa03", 
-    "physicianId": "physician00003", 
-    "id": "03", 
-    "quantity": 100
-}]
+# [{
+#     "id": "m01",
+#     "name": "Pfizer",
+#     "countryOfOrigin": "USA"
+# },
+# {
+#     "id": "m02",
+#     "name": "AstraZeneca",
+#     "countryOfOrigin": "UK"
+# }]
 
 
-# Post Patient Assignments
-POST http://localhost:9090/patient-management/patient_assignments
-content-type: application/json
 
-[{
-    "patientId": "pa01", 
-    "physicianId": "ph01", 
-    "id": "a01"
-},
-{
-    "patientId": "pa02", 
-    "physicianId": "ph02", 
-    "id": "a02"
-},
-{
-    "patientId": "pa03", 
-    "physicianId": "ph03", 
-    "id": "a03"
-}]
+# # Post Drugs
+# POST http://localhost:9090/patient-management/drugs
+# content-type: application/json
+
+# [{
+#     "id": "d01",
+#     "name": "Norvasc",
+#     "description": "treat for hypertension",
+#     "manufacturerId": "m01"
+# },
+# {
+#     "id": "d02",
+#     "name": "INDERAL",
+#     "manufacturerId": "m02",
+#     "description": "treat for hypertension"
+# },
+# {
+#     "id": "d03",
+#     "name": "NEXIUM",
+#     "manufacturerId": "m02",
+#     "description": "treat for indigestion"
+# }]
+
+# # Post Patients
+# POST http://localhost:9090/patient-management/patients
+# content-type: application/json
+
+# [{
+#     "id": "pa01", 
+#     "name": "Jane Doe", 
+#     "age": 37
+# },
+# {
+#     "id": "pa02", 
+#     "name": "John Doe", 
+#     "age": 30
+# },
+# {
+#     "id": "pa03", 
+#     "name": "Jacob Doe", 
+#     "age": 7
+# }]
+
+# # Drug Assignments
+# POST http://localhost:9090/patient-management/drug_assignments
+# content-type: application/json
+
+# [{
+#     "drugId": "d01", 
+#     "patientId": "pa01", 
+#     "physicianId": "ph01", 
+#     "id": "01", 
+#     "quantity": 100
+# },
+# {
+#     "drugId": "d02", 
+#     "patientId": "pa02", 
+#     "physicianId": "ph02", 
+#     "id": "02", 
+#     "quantity": 100
+# },
+# {
+#     "drugId": "d03", 
+#     "patientId": "pa03", 
+#     "physicianId": "physician00003", 
+#     "id": "03", 
+#     "quantity": 100
+# }]
 
 
-# Post Blood Pressure
-POST http://localhost:9090/patient-management/blood_pressure
-content-type: application/json
+# # Post Patient Assignments
+# POST http://localhost:9090/patient-management/patient_assignments
+# content-type: application/json
 
-[{
-    "patientId": "pa01", 
-    "systolic": 150, 
-    "diastolic": 98, 
-    "id": "pa01", 
-    "timestamp": "2023:07:02:17:30:00"
-},
-{
-    "patientId": "pa01", 
-    "systolic": 155, 
-    "diastolic": 95, 
-    "id": "pa01", 
-    "timestamp": "2023:07:02:19:30:00"
-},
-{
-    "patientId": "pa01", 
-    "systolic": 155, 
-    "diastolic": 95, 
-    "id": "pa01", 
-    "timestamp": "2023:07:02:21:30:00"
-},
-{
-    "patientId": "pa01", 
-    "systolic": 155, 
-    "diastolic": 95, 
-    "id": "pa01", 
-    "timestamp": "2023:07:02:23:30:00"
-},
-{
-    "patientId": "pa02", 
-    "systolic": 145, 
-    "diastolic": 90, 
-    "id": "pa02", 
-    "timestamp": "2023:07:02:17:30:00"
-},
-{
-    "patientId": "pa02", 
-    "systolic": 146, 
-    "diastolic": 85, 
-    "id": "pa02", 
-    "timestamp": "2023:07:02:19:30:00"
-},
-{
-    "patientId": "pa02", 
-    "systolic": 143, 
-    "diastolic": 85, 
-    "id": "pa02", 
-    "timestamp": "2023:07:02:21:30:00"
-},
-{
-    "patientId": "pa02", 
-    "systolic": 1140, 
-    "diastolic": 85, 
-    "id": "pa02", 
-    "timestamp": "2023:07:02:23:30:00"
-},
-{
-    "patientId": "pa03", 
-    "systolic": 110, 
-    "diastolic": 70, 
-    "id": "pa03", 
-    "timestamp": "2023:07:02:17:30:00"
-},
-{
-    "patientId": "pa03", 
-    "systolic": 112, 
-    "diastolic": 75, 
-    "id": "pa03", 
-    "timestamp": "2023:07:02:19:30:00"
-},
-{
-    "patientId": "pa03", 
-    "systolic": 114, 
-    "diastolic": 75, 
-    "id": "pa03", 
-    "timestamp": "2023:07:02:21:30:00"
-},
-{
-    "patientId": "pa03", 
-    "systolic": 116, 
-    "diastolic": 75, 
-    "id": "pa03", 
-    "timestamp": "2023:07:02:23:30:00"
-}]
+# [{
+#     "patientId": "pa01", 
+#     "physicianId": "ph01", 
+#     "id": "a01"
+# },
+# {
+#     "patientId": "pa02", 
+#     "physicianId": "ph02", 
+#     "id": "a02"
+# },
+# {
+#     "patientId": "pa03", 
+#     "physicianId": "ph03", 
+#     "id": "a03"
+# }]
 
-# Get PhysicianLogs
-GET http://localhost:9090/patient-management/physicians
+
+# # Post Blood Pressure
+# POST http://localhost:9090/patient-management/blood_pressure
+# content-type: application/json
+
+# [{
+#     "patientId": "pa01", 
+#     "systolic": 150, 
+#     "diastolic": 98, 
+#     "id": "pa01", 
+#     "timestamp": "2023:07:02:17:30:00"
+# },
+# {
+#     "patientId": "pa01", 
+#     "systolic": 155, 
+#     "diastolic": 95, 
+#     "id": "pa01", 
+#     "timestamp": "2023:07:02:19:30:00"
+# },
+# {
+#     "patientId": "pa01", 
+#     "systolic": 155, 
+#     "diastolic": 95, 
+#     "id": "pa01", 
+#     "timestamp": "2023:07:02:21:30:00"
+# },
+# {
+#     "patientId": "pa01", 
+#     "systolic": 155, 
+#     "diastolic": 95, 
+#     "id": "pa01", 
+#     "timestamp": "2023:07:02:23:30:00"
+# },
+# {
+#     "patientId": "pa02", 
+#     "systolic": 145, 
+#     "diastolic": 90, 
+#     "id": "pa02", 
+#     "timestamp": "2023:07:02:17:30:00"
+# },
+# {
+#     "patientId": "pa02", 
+#     "systolic": 146, 
+#     "diastolic": 85, 
+#     "id": "pa02", 
+#     "timestamp": "2023:07:02:19:30:00"
+# },
+# {
+#     "patientId": "pa02", 
+#     "systolic": 143, 
+#     "diastolic": 85, 
+#     "id": "pa02", 
+#     "timestamp": "2023:07:02:21:30:00"
+# },
+# {
+#     "patientId": "pa02", 
+#     "systolic": 1140, 
+#     "diastolic": 85, 
+#     "id": "pa02", 
+#     "timestamp": "2023:07:02:23:30:00"
+# },
+# {
+#     "patientId": "pa03", 
+#     "systolic": 110, 
+#     "diastolic": 70, 
+#     "id": "pa03", 
+#     "timestamp": "2023:07:02:17:30:00"
+# },
+# {
+#     "patientId": "pa03", 
+#     "systolic": 112, 
+#     "diastolic": 75, 
+#     "id": "pa03", 
+#     "timestamp": "2023:07:02:19:30:00"
+# },
+# {
+#     "patientId": "pa03", 
+#     "systolic": 114, 
+#     "diastolic": 75, 
+#     "id": "pa03", 
+#     "timestamp": "2023:07:02:21:30:00"
+# },
+# {
+#     "patientId": "pa03", 
+#     "systolic": 116, 
+#     "diastolic": 75, 
+#     "id": "pa03", 
+#     "timestamp": "2023:07:02:23:30:00"
+# }]
+
+# # Get PhysicianLogs
+# GET http://localhost:9090/patient-management/physicians
 
 # Get PatientLogs 
 GET http://localhost:9090/patient-management/patients/pa03

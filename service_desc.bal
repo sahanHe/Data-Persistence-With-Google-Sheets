@@ -1,6 +1,6 @@
 import ballerina/http;
 import ballerina/time;
-import medical_centre/patient_management.store;
+
 
 type RecordCreated record {|
     *http:Created;
@@ -31,15 +31,15 @@ public type PatientLog record {|
     string id;
     string name;
     int age;
-    store:PatientAssignmentOptionalized[] physiciansAssigned;
-    store:DrugAssignmentOptionalized[] drugassignment;
-    store:BloodPressureOptionalized[] bloodpressure;
+    record {|string patientId?; string physicianId?;|}[] physiciansAssigned;
+    record {|string physicianId?; string drugId?; string patientId?; int quantity?;|}[] drugassignment;
+    record {|string id?; string timestamp?; string patientId?; int systolic?; int diastolic?;|}[] bloodpressure;
 |};
 
 public type PhysicianLog record {|
     string id;
     string name;
     string specialization;
-    store:PatientAssignmentOptionalized[] patientsAssigned;
-    store:DrugAssignmentOptionalized[] drugsAssigned;
+    record {|string patientId?;|}[] patientsAssigned;
+    record {|string drugId?; string patientId?; int quantity?;|}[] drugsAssigned;
 |};
